@@ -28,3 +28,33 @@ Deploy an Azure Storage Account using an Azure Resource Manager (ARM) template a
 - Resource groups
 - Azure CLI deployments
 - Incremental deployments
+
+
+## Update: Parameters and Outputs
+
+Expanded the ARM template to make the Storage Account deployment more reusable and configurable.
+
+### Parameters
+
+Added a `storageAccountType` parameter to allow the Storage Account SKU to be selected during deployment instead of hardcoding the value.
+
+Allowed values:
+
+- Standard_LRS
+- Standard_GRS
+- Standard_ZRS
+- Premium_LRS
+
+### Outputs
+
+Added an ARM template output using the `reference()` function to retrieve the Storage Account's primary endpoints after deployment.
+
+### Deployment
+
+Deployed the updated template using Azure CLI through Azure Cloud Shell:
+
+```bash
+az deployment group create \
+  --resource-group sean-arm-lab \
+  --template-file azuredeploy.json \
+  --parameters storageAccountType=Standard_LRS
