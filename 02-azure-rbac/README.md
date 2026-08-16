@@ -56,3 +56,21 @@ The assignment was verified in **Access control (IAM)** and then removed to comp
 - Role-based access control
 - Least privilege
 - Azure resource governance
+
+
+## Activity Log Audit
+
+After creating and removing the RBAC role assignment, I reviewed the Azure Activity Log to verify that the administrative changes were recorded.
+
+The Activity Log showed:
+
+- Create role assignment — Succeeded
+- Delete role assignment — Succeeded
+
+Both operations were recorded as administrative events initiated through my Azure account.
+
+![Azure RBAC Activity Log](./azure-rbac-activity-log.png)
+
+## Key Takeaway
+
+Azure Activity Log provides an audit trail for Azure management operations, including RBAC role assignment changes.
