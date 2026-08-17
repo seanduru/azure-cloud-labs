@@ -1,11 +1,39 @@
-# Azure Blob Storage Lifecycle Management
+# Azure Blob Storage Labs
 
-Configured Azure Blob Storage by creating a private blob container, uploading a test blob, and implementing a lifecycle management policy to automatically transition aging data to the Cool storage tier.
+Hands on Azure Blob Storage labs completed as part of AZ 104 preparation.
 
-### Skills Practiced
+## Labs Completed
+
+### 1. Blob Storage Lifecycle Management
+
+* Created an Azure Storage Account and Blob container.
+* Uploaded a test blob.
+* Configured a lifecycle management policy.
+* Created an IF/THEN rule to automatically transition blobs to the Cool tier.
+* Practiced using storage tiers to optimize cost based on data access patterns.
+
+### 2. Public Website Storage
+
+Configured Azure Blob Storage to support a highly available public website containing images, videos, and documents.
+
+* Configured **GZRS** for high availability and regional redundancy.
+* Enabled **anonymous Blob access**.
+* Created a `website-content` container.
+* Enabled **Blob soft delete** for recovery.
+* Enabled **Blob versioning** to preserve previous versions.
+* Uploaded and modified a test blob to verify versioning.
+* Tested recovery by restoring a previous blob version.
+
+## Skills Practiced
 
 * Azure Blob Storage
+* Storage accounts
 * Blob containers and blobs
-* Lifecycle management policies
+* GZRS redundancy
+* Anonymous public access
+* Blob versioning
+* Blob soft delete
+* Lifecycle management
 * Storage access tiers
+* Blob recovery
 * Azure Portal administration
