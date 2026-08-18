@@ -55,3 +55,17 @@ Tested the generated SAS URL in an Incognito browser session and successfully ac
 
 ### Security Consideration
 SAS follows the principle of least privilege by limiting access to the required resource, permissions, protocol, and time period. Short expiration periods reduce the potential impact if a SAS token is compromised.
+
+## Azure Storage RBAC
+
+Assigned the **Storage Blob Data Reader** role to my Microsoft Entra ID identity at the storage account scope.
+
+### Configuration
+- Identity: Microsoft Entra ID user
+- Role: Storage Blob Data Reader
+- Scope: Storage account
+- Access: Read blob data
+
+This follows the principle of least privilege by granting only the permissions required to read blob data rather than broader storage management permissions.
+
+![Storage RBAC Role Assignment](storage-rbac-role-assignment.png)
